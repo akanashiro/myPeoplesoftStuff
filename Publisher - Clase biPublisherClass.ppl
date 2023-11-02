@@ -1,9 +1,11 @@
+<*
 publisherPackage
 |---> reportStructure (class)
 |---> createReport (class)
+*>
 
 /* ************************ */
-/* GENERATE XML & XSD FILES */
+/* Generate XML & XSD files */
 /* ************************ */
 
 import PSXP_XMLGEN:RowSetDS;
@@ -57,7 +59,7 @@ method generateXmlFile
 end-method;
 
 /* ****************** */
-/* PRINT REPORT CLASS */
+/* Print Report Class */
 /* ****************** */
 
 import PSXP_RPTDEFNMANAGER:ReportDefn;

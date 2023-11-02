@@ -1,2 +1,2 @@
 # myPeoplesoftStuff
-Some stuff I made as a Peoplesoft developer
+Some stuff I made as a PeopleSoft developer

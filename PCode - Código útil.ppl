@@ -6,3 +6,6 @@ Getenv("PS_HOME")
 
 /* Obtener Setid */
 &str_itm_setid = GetSetId("BUSINESS_UNIT", VOUCHER.BUSINESS_UNIT, "PURCH_ITEM_ATTR", "");
+
+/* Forzar al componente a ejecutar SaveEdit */
+SetReEdit(True);

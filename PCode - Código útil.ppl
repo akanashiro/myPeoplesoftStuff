@@ -1,0 +1,8 @@
+/* Para saber si un peoplecode está siendo invocado desde un CI */
+if %CompIntfcName = "abcdefg" then
+
+/* Obtener ruta definida en la variable de entorno */
+Getenv("PS_HOME")
+
+/* Obtener Setid */
+&str_itm_setid = GetSetId("BUSINESS_UNIT", VOUCHER.BUSINESS_UNIT, "PURCH_ITEM_ATTR", "");

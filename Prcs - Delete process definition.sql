@@ -1,0 +1,18 @@
+DELETE FROM PS_PRCSDEFN
+WHERE PRCSNAME = 'OldProcessName' AND PRCSTYPE = 'ProcessTypeName';
+
+The following DELETEs would be UPDATEs if only replacing OldProcessName:
+DELETE FROM PS_PRCSDEFNGRP
+WHERE PRCSNAME = 'OldProcessName' AND PRCSTYPE = 'ProcessType';
+
+DELETE FROM PS_PRCSDEFNPNL
+WHERE PRCSNAME = 'OldProcessName' AND PRCSTYPE = 'ProcessType';
+
+DELETE FROM PS_PRCSDEFNXFER
+WHERE PRCSNAME = 'OldProcessName' AND PRCSTYPE = 'ProcessType';
+
+DELETE FROM PSPRCSRQST
+WHERE PRCSNAME = 'OldProcessName' AND PRCSTYPE = 'ProcessType';
+
+UPDATE PSPNLFIELD SET PRCSNAME = 'NewProcessName'
+WHERE PRCSNAME = 'OldProcessName' AND PRCSTYPE = 'ProcessType';

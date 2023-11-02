@@ -1,3 +1,2 @@
 # My Peoplesoft Stuff
-Some stuff I wrote (and found) as a PeopleSoft developer.
-This repository also intends to be a collaborative place to push code snippets.
+Código que he ido creando y juntando en colaboración con colegas a lo largo del tiempo.

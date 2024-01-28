@@ -1,9 +1,0 @@
-Local Rowset &rsEmployee;
-/* Assuming the grid is on Level 1 */
-&rsEmployee = GetLevel0()(1).GetRowset(Scroll.EMPLOYEE);
-
-For &I= &rsEmployee.ActiveRowCount To 1 Step -1
- If &rsEmployee(&I).EMPLOYEE.EMPLOYEE_STATUS.Value = “ ” Then
-  &rsEmployee.DeleteRow(&I);
- End-If;
-End-For;

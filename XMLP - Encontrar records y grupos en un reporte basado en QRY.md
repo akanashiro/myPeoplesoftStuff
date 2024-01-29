@@ -1,26 +1,36 @@
--- Encontrar records/access groups para un BI Publisher basado en PSQUERY
+# Encontrar records/access groups para un BI Publisher basado en PSQUERY
 
--- (1) DS_TYPE should be "QRY", and DS_ID is Data Source
+_(1) DS_TYPE should be "QRY", and DS_ID is Data Source_
+
+```sql
 SELECT DS_TYPE, DS_ID
 FROM PSXPRPTDEFN
 WHERE REPORT_DEFN_ID = '<REPORT NAME>';
+```
 
--- (2) Returns data source
+_(2) Returns data source_
+```sql
 SELECT *
 FROM PSXPDATASRC
 WHERE DS_ID = '<DS_ID>';
+```
 
--- (3) Returns query definition
+_(3) Returns query definition_
+```sql
 SELECT * 
 FROM PSQRYDEFN 
 WHERE QRYNAME = '<DS_ID>';
+```
 
--- (4) Returns RECNAME(s)
+_(4) Returns RECNAME(s)_
+```sql
 SELECT * 
 FROM PSQRYRECORD 
 WHERE QRYNAME = '<DS_ID>';
+```
 
--- (5) Find Access Group(s)
+_(5) Find Access Group(s)_
+```sql
 SELECT AG.TREE_NODE AS Access_Group, R.TREE_NODE as Record
   FROM PSTREENODE AG,  PSTREENODE R
  WHERE AG.TREE_NODE_TYPE = 'G'
@@ -42,3 +52,4 @@ SELECT AG.TREE_NODE AS Access_Group, R.TREE_NODE as Record
                AND AG1.TREE_NODE = AG.TREE_NODE  
                AND AG1.TREE_BRANCH = AG.TREE_BRANCH  
                AND AG1.EFFDT <= SYSDATE);
+```

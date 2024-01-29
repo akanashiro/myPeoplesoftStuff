@@ -1,5 +1,7 @@
--- Check if the user can run an specific CI
+# Diversas queries sobre componentes
 
+## Verificar que el usuario puede ejecutar un CI específico 
+```sql
 SELECT A.OPRID, A.CLASSID, B.ROLENAME, C.BCNAME
 FROM PSUSERCLASSVW A,
      PSROLECLASS B,
@@ -8,8 +10,11 @@ WHERE A.oprid = '<user>'
   AND A.CLASSID = B.CLASSID
   AND B.CLASSID = C.CLASSID
   AND C.BCNAME = '<ci>';
+```
 
--- Check if the user can access to an specific component/page. It shows user and permission lists.
+## Verificar si el usuario tiene acceso a un componente/página específico.
+Muestra el usuario y listas de permisos.
+```sql
 SELECT DISTINCT AI.CLASSID, SS.OPRID
 FROM PSAUTHITEM AI, PSCLASSDEFN CD, PSPNLGROUP PG, PSMENUITEM MI, PSOPRCLS SS
 WHERE AI.MENUNAME = MI.MENUNAME AND
@@ -23,8 +28,10 @@ WHERE AI.MENUNAME = MI.MENUNAME AND
       PG.PNLNAME = '<page>' AND
       SS.OPRCLASS = AI.CLASSID AND SS.OPRID IN ('<user>')
 ORDER BY SS.OPRID, AI.CLASSID;
+```
 
--- Find a component's path
+## Encontrar la ruta de un componente.
+```sql
 SELECTLEVEL, portal.portal_objname,
     LPAD (' ', (4 - LEVEL) * 2)|| (
                  SELECT lng.portal_label
@@ -43,11 +50,19 @@ START WITH portal_objname =
                         WHERE portal_uri_seg1 LIKE '%'AND portal_uri_seg2 LIKE '%<component>%')
                 WHERE fila = 1)
 ORDER BY LEVEL DESC;
+```
 
-/*
-With this query you can retrieve permission list, menu, pages and authorization based on a component.
+## With this query you can retrieve permission list, menu, pages and authorization based on a component.
 http://peoplesoft.wikidot.com/forum/t-217275/information-for-documentation-purpose-through-peoplesoft-pro
+
+```sql
+/* 
+Displayonly = 1 (true) / 0 (false).
+
+Authorizedactions = 1 (Add) / 2 (Update/View) / 4 (View All) / 8 (Correct).
+These number can be combined. E.g.: 12 (View All + Correct).
 */
+
 SELECT AU.CLASSID,
   HH.MENUNAME,
   HH.BARNAME,
@@ -63,10 +78,4 @@ AND AU.BARITEMNAME = HH.ITEMNAME
 AND II.PNLGRPNAME = HH.PNLGRPNAME
 AND II.MARKET       = HH.MARKET
 AND II.PNLGRPNAME = '<component>';
-
-/* 
-Displayonly = 1 (true) / 0 (false).
-
-Authorizedactions = 1 (Add) / 2 (Update/View) / 4 (View All) / 8 (Correct).
-These number can be combined. E.g.: 12 (View All + Correct).
-*/
+```

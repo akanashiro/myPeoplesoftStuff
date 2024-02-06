@@ -13,7 +13,7 @@ This is the recommended setting by [Ketan on PeopleSoft Support & Tips](http://p
 
 I think I would prefer these settings instead:
 ```
--TRACE 7 -TOOLSTRACESQL 3 -TOOLSTRACEPC 3596
+-TRACE 7 -TOOLSTRACESQL 7 -TOOLSTRACEPC 3596
 ```
 
 

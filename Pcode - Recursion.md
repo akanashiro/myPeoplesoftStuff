@@ -23,7 +23,7 @@ Después de procesar la fila B, entonces la línea 3 es dividida y la fila B es 
 
 Entonces la última fila es evaluada
 
-![image05][def]
+![image05][def6]
 
 ### Algoritmo:
 
@@ -165,4 +165,4 @@ End-For;
 [def2]: ./images/recursion/recursion_02.png
 [def3]: ./images/recursion/recursion_03.png
 [def5]: ./images/recursion/recursion_04.png
-[def]: ./images/recursion/recursion_05.png
+[def6]: ./images/recursion/recursion_05.png

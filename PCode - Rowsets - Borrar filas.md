@@ -1,3 +1,4 @@
+```
 rem Borrado de filas SIEMPRE se hace de forma descendente;
  &RS2 = GetRowset(scroll.MY_GRID);
  
@@ -18,3 +19,4 @@ For &I= &rsEmployee.ActiveRowCount To 1 Step -1
   &rsEmployee.DeleteRow(&I);
  End-If;
 End-For;
+```

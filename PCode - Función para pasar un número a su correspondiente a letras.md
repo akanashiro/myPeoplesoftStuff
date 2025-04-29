@@ -1,3 +1,4 @@
+```
 /* Esta función es complementaria de la función num2let que es la principal y que invoca a esta.
 Esta función hace el pasaje de números a letras, a aquellos importes que estén entre 0 y 999*/
 Function num2letras(&importe) Returns String
@@ -129,3 +130,4 @@ End-If
  
 Return &num2let;
 End-Function
+```

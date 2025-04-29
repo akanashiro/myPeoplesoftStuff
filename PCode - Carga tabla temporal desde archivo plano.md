@@ -1,3 +1,4 @@
+```
 Local File &FILE;
 Local Record &REC;
 Local Rowset &FRS;
@@ -46,3 +47,4 @@ End-If;
 &file_log.WriteLine("Fin Lectura del Archivo. " | &cant | " líneas procesadas.");
 MessageBox(0, "", 0, 0, "Fin Lectura del Archivo. " | &cant | " líneas procesadas.");
 &file_log.Close();
+```

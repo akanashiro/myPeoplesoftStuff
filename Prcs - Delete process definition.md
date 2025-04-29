@@ -1,3 +1,4 @@
+```sql
 DELETE FROM PS_PRCSDEFN
 WHERE PRCSNAME = 'OldProcessName' AND PRCSTYPE = 'ProcessTypeName';
 
@@ -16,3 +17,4 @@ WHERE PRCSNAME = 'OldProcessName' AND PRCSTYPE = 'ProcessType';
 
 UPDATE PSPNLFIELD SET PRCSNAME = 'NewProcessName'
 WHERE PRCSNAME = 'OldProcessName' AND PRCSTYPE = 'ProcessType';
+```

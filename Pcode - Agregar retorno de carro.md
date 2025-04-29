@@ -1,3 +1,4 @@
+```c++
 /* Ejemplo */
 &string1 = "Emplid xyz123 ingresó a la compañía el 01/01/2008";
 &string2 = "Emplid xyz123 fue finiquitado el 01/02/2010";
@@ -23,5 +24,6 @@ Local File &File;
 &File.SetRecTerminator(Char(13));
 &File.WriteLine("hello");
 &File.Close();
+```
 
 [Código ASCII](https://elcodigoascii.com.ar/caracteres-ascii-control/enter-retorno-carro-codigo-ascii-13.html)

@@ -1,3 +1,4 @@
+```
 /*
 * Set the enabled state of all the fields in &rec to &state. You
 * don't have to call this function directly. For convenience and for
@@ -25,3 +26,4 @@ End-Function;
 Function disable_fields(&rec As Record)
   set_fields_state(&rec, False);
 End-Function;
+```

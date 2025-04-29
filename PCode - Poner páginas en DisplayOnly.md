@@ -1,3 +1,4 @@
+```
 /* Poner en displayonly todas las páginas del componente */
 
 &rec = &rs(1).GetRecord(Record.PSPNLGRPDEFN);
@@ -9,3 +10,4 @@ For &i = 1 To &rs_pnl.ActiveRowCount
    &pnlname = &rs_pnl(&i).PSPNLGROUP.PNLNAME.Value;
    GetPage(@("PAGE." | &pnlname)).DisplayOnly = True;
 End-For;
+```

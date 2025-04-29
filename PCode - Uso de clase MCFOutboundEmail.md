@@ -1,6 +1,8 @@
-rem Código de ejemplo de Application Package PT_MCF_MAIL:MCFOutboundEmail ;
-rem Tomado de http://www.pscustomizer.com/peoplesoft-examples/email-with-app-package/;
+# Código de ejemplo de Application Package PT_MCF_MAIL:MCFOutboundEmail 
 
+Tomado de [http://www.pscustomizer.com/peoplesoft-examples/email-with-app-package/](http://www.pscustomizer.com/peoplesoft-examples/email-with-app-package/)
+
+```
 Import PT_MCF_MAIL:*;
 
 Local PT_MCF_MAIL:MCFOutboundEmail &email;
@@ -89,3 +91,4 @@ Function Email_Example(&Email_Address_To As string, &Email_Address_From As strin
    End-Evaluate;
 
 End-Function;
+```

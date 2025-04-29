@@ -1,3 +1,4 @@
+```sql
 DELETE PS_PRCSJOBDEFN
     WHERE PRCSJOBNAME = '<Job>';
     
@@ -18,3 +19,4 @@ DELETE PS_PRCSJOBMESSAGE
     
 -- Si quedan procesos en el scheduler
 DELETE PSPRCSRQST WHERE PRCSJOBNAME = '<Job>';
+```

@@ -1,3 +1,4 @@
+```
 /* Deshabilitar todos los campos de la página (nivel 0) */
 function disableLevel0()
     Local Rowset &RS;
@@ -51,3 +52,4 @@ Function disableScrolls(&aRowset1 As string, &aRowset2 As string)
    End-If;
    
 End-Function;
+```

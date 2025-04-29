@@ -1,3 +1,4 @@
+```
 /* Función sleep para ejecutar instrucciones con un determinado delay */
 Function Sleep()
     &current_time = %Datetime;
@@ -9,3 +10,4 @@ Function Sleep()
         End-If;
     End-While
 End-Function;
+```

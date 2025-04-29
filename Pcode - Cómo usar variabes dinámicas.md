@@ -1,5 +1,4 @@
-/* Cómo usar variabes dinámicas en PeopleCode */
-
+```
 /* Nombre de un Record dinámicamente */
 &RECNAME = “JOB”;
 &RECNAME = “RECORD.” | Upper(&RECNAME);
@@ -18,3 +17,4 @@ Local Record &REC;
 For &i = 1 To &rec.activerowcount
     &REC.GetField(@(“Field.” | “STATUS” | String(&i)).Value = &i;
 end-for;
+```

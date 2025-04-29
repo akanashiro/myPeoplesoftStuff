@@ -1,3 +1,4 @@
+```
 /*Genero un Rowset con la cabecera*/
 &rs1 = CreateRowset(Record.CABECERA);
 
@@ -12,3 +13,4 @@
 
 /*Copio los datos de la cabecera el rowset final*/
 &rs2.CopyTo(&rs3.GetRow(1).GetRowset(Scroll.RECORD_LINEA), Record.RECORD_ORIGEN, Record.RECORD_DESTINO_LINEA);
+```

@@ -1,3 +1,4 @@
+```c++
 <*
 publisherPackage
 |---> reportStructure (class)
@@ -146,3 +147,4 @@ method buildRptOnLine
 	/* Mostrar salida en otra ventana */
 	&oReportDefn.DisplayOutput();
 end-method;
+```

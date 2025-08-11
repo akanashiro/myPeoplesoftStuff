@@ -1,6 +1,11 @@
-## Para calcular año, mes y día con el formato "99a, 99m, 99d"
+/*markdown
+# Para calcular año, mes y día con el formato "99a, 99m, 99d"
 
-```sql
+Formateado con [SQL Notebook][def]
+
+[def]: https://marketplace.visualstudio.com/items?itemName=cmoog.sqlnotebook
+*/
+
 SELECT 
 	to_char(trunc(trunc(months_between(%CurrentDateIn, A.HIRE_DT))/12)) 
        || 'a ,' || 
@@ -9,4 +14,3 @@ SELECT
 	to_char(trunc(%CurrentDateIn - add_months(A.HIRE_DT,trunc(months_between(%CurrentDateIn, A.HIRE_DT))))) 
 		|| 'd '
 FROM dual
-```

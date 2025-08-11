@@ -1,34 +1,41 @@
-**Microsoft SQL Server**
+/*markdown
+# Retornar los primeros N registros
+Formateado con [SQL Notebook][def]
 
-```sql
+[def]: https://marketplace.visualstudio.com/items?itemName=cmoog.sqlnotebook
+*/
+
+/*markdown
+**Microsoft SQL Server**
+*/
+
 SELECT TOP 10 column
 FROM table
-```
 
+/*markdown
 **PostgreSQL and MySQL**
+*/
 
-```sql
 SELECT column FROM table
 LIMIT 10
-```
 
+/*markdown
 **Oracle**
+*/
 
-```sql
 SELECT column FROM table
 WHERE ROWNUM <= 10
-```
 
+/*markdown
 **Sybase**
+*/
 
-```sql
 SET rowcount 10
 SELECT column FROM table
-```
 
+/*markdown
 **Firebird**
+*/
 
-```sql
 SELECT FIRST 10 column 
 FROM table
-```

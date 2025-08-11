@@ -1,7 +1,14 @@
+/*markdown
 # Diversas queries sobre componentes
+Formateado con [SQL Notebook][def]
 
+[def]: https://marketplace.visualstudio.com/items?itemName=cmoog.sqlnotebook
+*/
+
+/*markdown
 ## Verificar que el usuario puede ejecutar un CI específico 
-```sql
+*/
+
 SELECT A.OPRID, A.CLASSID, B.ROLENAME, C.BCNAME
 FROM PSUSERCLASSVW A,
      PSROLECLASS B,
@@ -10,11 +17,12 @@ WHERE A.oprid = '<user>'
   AND A.CLASSID = B.CLASSID
   AND B.CLASSID = C.CLASSID
   AND C.BCNAME = '<ci>';
-```
 
+/*markdown
 ## Verificar si el usuario tiene acceso a un componente/página específico.
 Muestra el usuario y listas de permisos.
-```sql
+*/
+
 SELECT DISTINCT AI.CLASSID, SS.OPRID
 FROM PSAUTHITEM AI, PSCLASSDEFN CD, PSPNLGROUP PG, PSMENUITEM MI, PSOPRCLS SS
 WHERE AI.MENUNAME = MI.MENUNAME AND
@@ -28,10 +36,11 @@ WHERE AI.MENUNAME = MI.MENUNAME AND
       PG.PNLNAME = '<page>' AND
       SS.OPRCLASS = AI.CLASSID AND SS.OPRID IN ('<user>')
 ORDER BY SS.OPRID, AI.CLASSID;
-```
 
+/*markdown
 ## Encontrar la ruta de un componente.
-```sql
+*/
+
 SELECTLEVEL, portal.portal_objname,
     LPAD (' ', (4 - LEVEL) * 2)|| (
                  SELECT lng.portal_label
@@ -50,12 +59,12 @@ START WITH portal_objname =
                         WHERE portal_uri_seg1 LIKE '%'AND portal_uri_seg2 LIKE '%<component>%')
                 WHERE fila = 1)
 ORDER BY LEVEL DESC;
-```
 
+/*markdown
 ## With this query you can retrieve permission list, menu, pages and authorization based on a component.
 http://peoplesoft.wikidot.com/forum/t-217275/information-for-documentation-purpose-through-peoplesoft-pro
+*/
 
-```sql
 /* 
 Displayonly = 1 (true) / 0 (false).
 
@@ -78,4 +87,3 @@ AND AU.BARITEMNAME = HH.ITEMNAME
 AND II.PNLGRPNAME = HH.PNLGRPNAME
 AND II.MARKET       = HH.MARKET
 AND II.PNLGRPNAME = '<component>';
-```

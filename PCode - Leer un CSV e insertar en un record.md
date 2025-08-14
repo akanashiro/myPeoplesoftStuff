@@ -1,4 +1,5 @@
-En este caso es sin filelayout, se lee por posición.
+Lee un archivo plano CSV y almancena cada campo en un array usando el ";" como separador.
+Se lee por posición.
 
 ```
 Local Record &recInsert;

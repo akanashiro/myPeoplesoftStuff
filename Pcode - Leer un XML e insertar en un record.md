@@ -1,3 +1,4 @@
+Lee un XML y parsea por etiqueta.
 ```
 Local XmlDoc &inXMLDoc;
 Local array of XmlNode &xmlNodeEmpleado;

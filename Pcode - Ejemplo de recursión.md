@@ -1,8 +1,6 @@
 # Ejemplo de algoritmo para separar fechas utilizando recursividad
 
-Maybe recursion is not the most used method in a Peoplesoft implementation. In fact I had only used it once.
-
-However, Peoplecode is capable of performing recursion, so I wrote an example.
+_Tal vez la recursión no es el método más usado en una implementación en Peoplesoft y la verdad lo he usado una sola vez. Sin embargo, PeopleCode es capaz de llevar a cabo recursión así que doy este ejemplo_
 
 ## Ejemplo:
 Imaginemos un fondo de inversión. Este cuadro del progreso del valor de nuestras cuotas desde el 15 de mayo de 2018 al 30 de diciembre del 2018 y desde el 1 de enero de 2019 al 31 de marzo de 2019.
